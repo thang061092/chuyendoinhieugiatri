@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputFeet" type="number" placeholder="feet"
+       oninput="convert(this.value)"
+       onchange="convert(this.value)">
+<p>Meter: <span id="meter"></span></p>
+<script>
+    function convert(convert) {
+        convert = parseFloat(convert);
+        document.getElementById("meter").innerHTML= 0.305*convert;
+    }
+</script>
+
+</body>
+</html>
